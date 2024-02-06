@@ -98,7 +98,7 @@ public class BoardGamesGUI extends JFrame {
     public static void main(String[] args) {
         BoardGamesGUI bgGUI = new BoardGamesGUI();
         bgGUI.setContentPane(bgGUI.panel);
-        bgGUI.setSize(500, 700);
+        bgGUI.setSize(500, 250);
         bgGUI.setDefaultCloseOperation(EXIT_ON_CLOSE);
         bgGUI.setTitle("Board Games");
         bgGUI.setVisible(true);
