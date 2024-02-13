@@ -48,7 +48,7 @@
           </grid>
         </constraints>
         <properties>
-          <background color="-16777216"/>
+          <background color="-394241"/>
           <foreground color="-394241"/>
         </properties>
       </component>

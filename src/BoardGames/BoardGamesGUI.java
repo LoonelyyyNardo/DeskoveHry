@@ -23,9 +23,9 @@ public class BoardGamesGUI extends JFrame {
     public static void main(String[] args) {
         BoardGamesGUI bgGUI = new BoardGamesGUI();
         bgGUI.setContentPane(bgGUI.panel);
-        bgGUI.setSize(500, 250);
+        bgGUI.setSize(500, 270);
         bgGUI.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        bgGUI.setTitle("Board Games");
+        bgGUI.setTitle("Deskovky");
         bgGUI.setVisible(true);
     }
     public BoardGame getBoG(int i){
