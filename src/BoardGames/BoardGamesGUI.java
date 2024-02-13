@@ -20,7 +20,14 @@ public class BoardGamesGUI extends JFrame {
     private int index = 0;
     private final int[] selectedScore = {1};
 
-
+    public static void main(String[] args) {
+        BoardGamesGUI bgGUI = new BoardGamesGUI();
+        bgGUI.setContentPane(bgGUI.panel);
+        bgGUI.setSize(500, 250);
+        bgGUI.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        bgGUI.setTitle("Board Games");
+        bgGUI.setVisible(true);
+    }
     public BoardGame getBoG(int i){
         return BGList.get(i);
     }
@@ -67,9 +74,7 @@ public class BoardGamesGUI extends JFrame {
             System.err.println("Wrongly formatted number: " + e.getLocalizedMessage());
         }
     }
-    private void handleRadioButtonClick(int score) {
-        selectedScore[0] = score;
-    }
+
     public void saveToFile() {
         int selectedIndex = index;
         BoardGame selectedBG = BGList.get(selectedIndex);
@@ -95,13 +100,9 @@ public class BoardGamesGUI extends JFrame {
             case 3 -> RB3.setSelected(true);
         }
     }
-    public static void main(String[] args) {
-        BoardGamesGUI bgGUI = new BoardGamesGUI();
-        bgGUI.setContentPane(bgGUI.panel);
-        bgGUI.setSize(500, 250);
-        bgGUI.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        bgGUI.setTitle("Board Games");
-        bgGUI.setVisible(true);
+    private void handleRadioButtonClick(int score) {
+        selectedScore[0] = score;
     }
+
 }
 
