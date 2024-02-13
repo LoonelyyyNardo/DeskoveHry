@@ -56,7 +56,15 @@ public class BoardGamesGUI extends JFrame {
         readingFromFIle();
         displayBG(getBoG(index));
     }
-
+    public void displayBG(BoardGame bg){
+        txtName.setText(bg.getName());
+        CBOwned.setSelected(bg.isOwned());
+        switch (bg.getScore()){
+            case 1 -> RB1.setSelected(true);
+            case 2 -> RB2.setSelected(true);
+            case 3 -> RB3.setSelected(true);
+        }
+    }
     public void readingFromFIle() {
         try (Scanner sc = new Scanner(new BufferedReader(new FileReader("BoardGames.txt")))) {
             while (sc.hasNextLine()) {
@@ -91,15 +99,7 @@ public class BoardGamesGUI extends JFrame {
             System.err.println("Error writing to file: " + e.getLocalizedMessage());
         }
     }
-    public void displayBG(BoardGame bg){
-        txtName.setText(bg.getName());
-        CBOwned.setSelected(bg.isOwned());
-        switch (bg.getScore()){
-            case 1 -> RB1.setSelected(true);
-            case 2 -> RB2.setSelected(true);
-            case 3 -> RB3.setSelected(true);
-        }
-    }
+
     private void handleRadioButtonClick(int score) {
         selectedScore[0] = score;
     }
