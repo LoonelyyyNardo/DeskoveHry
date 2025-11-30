@@ -1,3 +1,4 @@
 Kloboučku hop;owned;1
 Člověče nezlob se;not owned;2
-Lodě;owned;3
+Lodě;owned;2
+
